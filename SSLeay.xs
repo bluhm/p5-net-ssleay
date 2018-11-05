@@ -4739,7 +4739,7 @@ SSL_set_max_proto_version(ssl, version)
 #endif /* OpenSSL 1.1.0 or LibreSSL 2.6.0 */
 
 
-#if OPENSSL_VERSION_NUMBER >= 0x1010007fL && !defined(LIBRESSL_VERSION_NUMBER)
+#if (OPENSSL_VERSION_NUMBER >= 0x1010007fL && !defined(LIBRESSL_VERSION_NUMBER)) || (LIBRESSL_VERSION_NUMBER >= 0x2070000fL)
 
 int
 SSL_CTX_get_min_proto_version(ctx)
